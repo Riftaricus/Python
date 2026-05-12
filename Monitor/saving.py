@@ -16,4 +16,4 @@ def save(data: dict):
     }
 
     with open(filepath, "a") as f:
-        f.write(json.dumps(entry, indent=1) + "\n")
+        f.write(json.dumps(entry) + "\n")
