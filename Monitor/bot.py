@@ -153,7 +153,7 @@ class Bot:
                     entry = json.loads(line)
                     data = entry["data"]
 
-                    times.append(entry["timestamp"])
+                    times.append(datetime.datetime.fromisoformat(entry["timestamp"]))
                     cpu.append(data["cpu"]["usage_percent"])
                     ram.append(data["ram"]["usage_percent"])
                     disk.append(data["disk"]["usage_percent"])
@@ -166,6 +166,13 @@ class Bot:
         plt.plot(times, cpu, label="CPU %")
         plt.plot(times, ram, label="RAM %")
         plt.plot(times, disk, label="Disk %")
+
+        plt.gca().xaxis.set_major_formatter(
+            plt.matplotlib.dates.DateFormatter("%H:%M:%S")
+        )
+        plt.gca().xaxis.set_major_locator(
+            plt.matplotlib.dates.AutoDateLocator()
+        )
 
         plt.xticks(rotation=45)
         plt.xlabel("Time")
