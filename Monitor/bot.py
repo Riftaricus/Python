@@ -154,9 +154,9 @@ class Bot:
                     data = entry["data"]
 
                     times.append(datetime.datetime.fromtimestamp(entry["timestamp"]))
-                    cpu.append(data["cpu"]["usage_percent"] * 100)
-                    ram.append(data["ram"]["usage_percent"] * 100)
-                    disk.append(data["disk"]["usage_percent"] * 100)
+                    cpu.append(data["cpu"]["usage_percent"])
+                    ram.append(data["ram"]["usage_percent"])
+                    disk.append(data["disk"]["usage_percent"])
 
                 except Exception:
                     continue
