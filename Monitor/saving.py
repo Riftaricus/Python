@@ -11,7 +11,7 @@ def save(data: dict):
     filepath = os.path.join(URL, "history.jsonl")
 
     entry = {
-        "timestamp": datetime.datetime.now().isoformat(),
+        "timestamp": int(datetime.datetime.now().timestamp()),
         "data": data
     }
 

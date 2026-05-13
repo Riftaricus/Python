@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    container_name: website_check_app
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python Monitor/main.py

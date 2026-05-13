@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from classes import Statistics
 from saving import save
 
-STATS_CHANNEL_ID = 1503834424788389918
+STATS_CHANNEL_ID = 1504036808323760239
 
 RAM_THRESHOLD = 80
 CPU_THRESHOLD = 80
