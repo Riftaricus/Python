@@ -153,7 +153,7 @@ class Bot:
                     entry = json.loads(line)
                     data = entry["data"]
 
-                    times.append(datetime.datetime.fromisoformat(entry["timestamp"]))
+                    times.append(datetime.datetime.fromtimestamp(entry["timestamp"]))
                     cpu.append(data["cpu"]["usage_percent"] * 100)
                     ram.append(data["ram"]["usage_percent"] * 100)
                     disk.append(data["disk"]["usage_percent"] * 100)
