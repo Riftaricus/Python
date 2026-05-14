@@ -1,4 +1,5 @@
-geocoder
-requests
+discord.py
 apscheduler
-discord
+dotenv
+requests
+geocoder
