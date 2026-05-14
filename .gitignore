@@ -2,4 +2,4 @@ history.jsonl
 .env
 __pycache__
 *.pyc
-Monitor/graph.png
+graph.png
